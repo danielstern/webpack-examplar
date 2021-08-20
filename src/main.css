@@ -1,0 +1,45 @@
+/* https://webpack.js.org/loaders/css-loader/ */
+
+.game-revealed-image-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+
+.game-revealed-image-container > * {
+    position: absolute;
+}
+.game-revealed-image-cover {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 1;
+}
+.game-revealed-image {
+    top: 0;
+    left: 0;
+    
+}
+
+.game-revealed-image img {
+
+    width: 200px;
+    height: 200px;
+ 
+
+}
+
+.secret-word-container.success {
+
+    color: green;
+
+}
+
+.secret-word-container.failure {
+
+    color: red;
+    
+}

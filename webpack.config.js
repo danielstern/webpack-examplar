@@ -1,4 +1,4 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require("webpack");
 
 const { resolve } = require("path");
@@ -8,15 +8,11 @@ module.exports = {
     mode: "development",
     entry:"./src/index.jsx",
     plugins: [
-        new MiniCssExtractPlugin()
+        // new MiniCssExtractPlugin()
     ],
-    // externals: [nodeExternals()],
     output: {
         filename: 'index.js',
         path: resolve(__dirname, "bin")
-    },
-    node: {
-        __dirname: false
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -33,17 +29,18 @@ module.exports = {
                         presets: [
                             '@babel/preset-env',
                             '@babel/preset-react'
-                        ],
-                        // "plugins":[
-                            // "@babel/transform-runtime"
-                        // ],
+                        ]
                     }
                 }
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                use: ["style-loader", "css-loader"]
             },
+            {
+                test: /\.yaml$/,
+                use: 'js-yaml-loader',
+            }
         ]
     },
     devServer: {

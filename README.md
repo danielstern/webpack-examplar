@@ -1,4 +1,4 @@
-# Webpack Tic Tac Toe
+# Webpack ++GAME++
 
-## It's Tac Tac Toe but Way Way Way More Complicated
+## It's ++GAME++ but Way Way Way More Complicated
 
