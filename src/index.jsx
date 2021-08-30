@@ -107,6 +107,14 @@ const Main = ({secretWordCategory, secretWord, selectedLetters, failure, success
             <div className="game-revealed-image-cover" style={{height: `${100 - errorsUsedPercent}%`}}>
             </div>
         </div>
+        <div className="selected-letter-container">
+
+            <span>USED:</span>
+
+            {selectedLetters.map((letter, index) => (
+                <span key={index}>{letter}</span>
+            ))}
+        </div>
         <div>
             {[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map(letterOption => {
 
